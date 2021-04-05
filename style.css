@@ -290,3 +290,81 @@ button.active {
   pointer-events: none;
 }
 /* ------------------------Image Slider------------------------------ */
+
+/* ------------------------Input Animation ---------------------------- */
+
+.demo4 {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(66, 60, 60);
+}
+
+.demo4 h1 {
+  font-size: 4rem;
+  color: white;
+  padding: 5rem;
+  border-radius: 77px;
+  background: linear-gradient(145deg, #474040, #3b3636);
+  box-shadow: 35px 35px 70px #373232, -35px -35px 70px #4d4646;
+}
+
+.form {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: #1d3980;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 3px solid black;
+}
+
+.form label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: 0.3s transform ease;
+}
+
+.content-name {
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+/* ------------------------Input Animation ---------------------------- */
