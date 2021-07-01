@@ -141,7 +141,7 @@ section {
 }
 
 .sizes button {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
   margin: 0rem 0.5rem;
   background: white;
   border: none;
@@ -378,3 +378,58 @@ button.active {
   transform: translateX(0%);
 }
 /* ------------------------Input Animation ---------------------------- */
+
+/* ------------------------media queries ------------------------------- */
+
+@media screen and (max-width: 1024px) {
+  .contain {
+    scroll-snap-type: none;
+  }
+}
+@media screen and (max-width: 414px) {
+  .contain {
+    scroll-snap-type: none;
+  }
+  .main {
+    font-size: 4rem;
+  }
+  .demo1,
+  .svg,
+  .demo3 {
+    flex-direction: column;
+  }
+  .demo1 h2 {
+    margin: 4rem 0rem;
+  }
+  .card {
+    width: 30rem;
+  }
+  .sizes button {
+    font-size: 1rem;
+  }
+  .svg h2 {
+    font-size: 3rem;
+    margin: 6rem 0rem;
+  }
+  .svg svg {
+    height: 270px;
+  }
+
+  .demo3 h2 {
+    text-align: center;
+    margin: 4rem 0rem;
+  }
+  .container1 {
+    width: 40vh;
+  }
+  .img-container-before,
+  .img-container-after {
+    width: 40vh;
+  }
+  .img-container-before {
+    width: 30vh;
+  }
+  .img {
+    width: 40vh;
+  }
+}
