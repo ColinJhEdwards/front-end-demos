@@ -18,9 +18,19 @@ body {
   color: #d6ad60;
 }
 
+.contain {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start end;
+}
+
 /* Main page */
 
-main {
+.main {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -32,7 +42,7 @@ main {
   color: white;
 }
 
-main h1 {
+.main h1 {
   padding: 5rem;
   border-radius: 77px;
   background: linear-gradient(145deg, #474040, #3b3636);
